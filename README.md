@@ -2,7 +2,7 @@
 
 ## Install
 ```Shell
-npm install nbcnews/anc-news-api#v1.0.0
+npm install nbcnews/anc-news-api#v1.0.1
 ```
 
 ## Usage
