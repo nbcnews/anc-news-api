@@ -53,8 +53,8 @@ export default function appleNewsAPI(channelID, APIKey, APISecret) {
     readArticle: articleID => appleNewsRequest(`articles/${articleID}`),
     readChannel: () => appleNewsRequest(`channels/${channelID}`),
     readSection: sectionID => appleNewsRequest(`sections/${sectionID}`),
-    searchChannel: searchQuery => appleNewsRequest(`channels/${channelID}/articles${validSearchQuery(searchQuery)}`),
-    searchSection: (sectionID, searchQuery) => appleNewsRequest(`sections/${sectionID}/articles${validSearchQuery(searchQuery)}`),
+    searchChannel: (searchQuery = {}) => appleNewsRequest(`channels/${channelID}/articles${validSearchQuery(searchQuery)}`),
+    searchSection: (sectionID, searchQuery = {}) => appleNewsRequest(`sections/${sectionID}/articles${validSearchQuery(searchQuery)}`),
     updateArticle: (
       articleID,
       revision,
